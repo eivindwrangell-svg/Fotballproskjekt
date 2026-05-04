@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* nav shit */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    height: 60px;
+    background: rgba(45, 95, 35, 1);
+    border-radius: 10px;
+    color: white;
+    filter: brightness(110%);
+}
+
+.burger-container {
+    display: none;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+
+
+    gap: 20px;
+    font-size: 20px;
+    padding-left: 150px;
+}
+
+.nav-link {
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    transform: scale(1.05);
+    color: wheat;
+}
+
+.bg1 {
+    background-image: url(./fotballbane-bakgrunn.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+    filter: blur(5px) brightness(75%);
+
+
+}
+
+.bg2 {
+    background-image: url(./fotballbane-bakgrunn.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+
+}
+
+
+img {
+    display: block;
+
+}
+
+/* tittelstyling */
+.tittel {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.tittel h1 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.tittel h2 {
+    font-size: 40px;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+    opacity: 0.85;
+}
+
+/* Bane styling */
+.bane-container {
+    margin: 0 auto;
+    width: min(90vw, 700px);
+    aspect-ratio: 101 / 150;
+    /* mattehjelp fra chatgpt, men er ut ifra bildet som er (404, 600) */
+    /* margin: 20px auto; */
+    position: relative;
+    border: 5px solid white;
+
+
+
+
+}
+
+.bane {
+
+    position: absolute;
+    inset: 0;
+    /* samme som, top:0 ; right 0 bottom 0 left 0  */
+
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+
+}
+
+
+
+.benk {
+    width: min(90vw, 700px);
+
+    background: rgba(45, 95, 35, 1);
+    margin: 0 auto;
+    padding: 10px;
+    border-width: 0 5px 5px 5px;
+    border-style: solid;
+    border-color: white;
+    margin-top: 0;
+
+    display: grid;
+
+    justify-items: center;
+    align-items: center;
+
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.benk .position {
+    height: 150px;
+}
+
+.position {
+    background-image: url(./bilder-fotballproskjekt/goldcard.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 175px;
+    aspect-ratio: 129 / 179;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.player-img {
+    height: 70px;
+    border-radius: 10px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.position-title {
+    display: none;
+}
+
+.position.active {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px gold;
+}
+
+
+/* kryss */
+.position.active .cross {
+    display: block;
+}
+
+.position .cross {
+    position: absolute;
+    top: 35px;
+    left: 15px;
+    display: none;
+
+}
+
+/* search */
+.position .search {
+    position: absolute;
+    top: 35px;
+    right: 17px;
+    display: none;
+}
+
+.position.active .search {
+    display: block;
+}
+
+/* position placeholder */
+.position-placeholder {
+    font-size: 1rem;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+
+.position.active .position-placeholder {
+    display: none;
+}
+
+
+/* search ting */
+.search-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    place-items: center;
+    background: rgba(0, 0, 0, .65);
+    z-index: 9999;
+}
+
+.search-overlay.active {
+    display: grid;
+}
+
+.search-modal {
+    width: min(520px, 92vw);
+    background: rgba(20, 20, 20, .95);
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 18px;
+    padding: 18px;
+    position: relative;
+}
+
+.search-modal h3 {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+    color: white;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, .22);
+    background: rgba(0, 0, 0, .25);
+    color: white;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search-input::placeholder {
+    color: white;
+}
+
+.search-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 0;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.search-hint {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.75;
+    color: white;
+}
+
+.search-results {
+    margin-top: 12px;
+}
+
+
+
+/* css til alt om results */
+.result-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, .16);
+    background: rgba(255, 255, 255, .06);
+    cursor: pointer;
+}
+
+.result-item:hover {
+    background: rgba(255, 255, 255, .12);
+}
+
+.result-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    object-fit: cover;
+}
+
+.result-name {
+    color: white;
+    text-align: left;
+}
+
+
+
+
+
+
+/* grid til hver position */
+#s {
+    grid-row: 2/4;
+    grid-column: 3;
+}
+
+#vv {
+    grid-row: 3/5;
+    grid-column: 1/3;
+}
+
+#hv {
+    grid-row: 3/5;
+    grid-column: 4/6;
+}
+
+#vSm {
+    grid-row: 5/7;
+    grid-column: 2;
+}
+
+#hSm {
+    grid-row: 5/7;
+    grid-column: 4;
+}
+
+#sdm {
+    grid-row: 6/8;
+    grid-column: 3;
+}
+
+#vb {
+    grid-row: 8;
+    grid-column: 1/2;
+}
+
+#hb {
+    grid-row: 8;
+    grid-column: 5/6;
+}
+
+#vMs {
+    grid-row: 8/10;
+    grid-column: 2;
+}
+
+#hMs {
+    grid-row: 8/10;
+    grid-column: 4;
+}
+
+#k {
+    grid-row: 9/11;
+    grid-column: 3;
+}
+
+.ai-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(45, 95, 35, 1);
+    padding: 20px;
+    border-radius: 20px;
+    display: none;
+    color: white;
+}
+
+.ai-container button {
+    height: 20px;
+    width: 80px;
+    margin: 20px;
+}
+
+.ai-container.active {
+    display: grid;
+    place-items: center;
+    align-items: center;
+}
+
+.ai-container h2 {
+    margin-bottom: 10px;
+}
+
+.ai-container .cross {
+    position: absolute;
+    top: 20px;
+    left: 7px;
+}

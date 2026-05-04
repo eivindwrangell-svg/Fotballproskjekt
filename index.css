@@ -1,0 +1,118 @@
+:root {
+
+    --color-green-bc: rgba(45, 95, 35, 1);
+    --color-black-green: rgba(20, 40, 10, 1);
+    --black: rgba(0, 0, 0, 0);
+    --white: rgba(255, 255, 255, 0.9);
+    --color-neon-green: rgba(30, 255, 80, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    text-align: center;
+    align-content: start;
+    min-height: 100vh;
+}
+
+/* nav shit */
+.nav-container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+
+
+    width: min(50%, 700px);
+    height: 60px;
+    padding: 15px 40px;
+    background: var(--color-green-bc);
+    border-radius: 10px;
+    color: white;
+
+}
+
+.burger-container {
+    display: none;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+
+
+    gap: 20px;
+    font-size: 20px;
+    padding-left: 150px;
+}
+
+.nav-link {
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    transform: scale(1.05);
+    color: wheat;
+}
+
+.bg1 {
+    background-image: url(./fotballbane-bakgrunn.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+    filter: blur(5px) brightness(75%);
+}
+
+
+
+
+img {
+    display: block;
+
+}
+
+
+.index-logo {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: min(700px, 50%);
+    background: linear-gradient(to left, var(--color-green-bc), var(--color-black-green));
+    transform: skew(-10deg);
+    height: 150px;
+    border-radius: 10px;
+    border-left: 10px solid var(--color-neon-green);
+
+    color: var(--white);
+    font-size: 100px;
+    font-weight: 800;
+
+    opacity: 0.85;
+
+}

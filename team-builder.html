@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="team-builder.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Fotball</title>
+</head>
+
+<body>
+
+    <div class="nav-container">
+        <div class="logo">
+            <li><a href="#"><i class="fa-regular fa-futbol"></i></a></li>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link aiBtn">Ai rating</a></li>
+            <li><a href="team-builder.html" class="nav-link">Team Builder</a></li>
+
+        </ul>
+        <div class="burger-container">
+            <i class="fa-solid fa-bars burger"></i>
+            <i class="fa-solid fa-x x"></i>
+        </div>
+    </div>
+    <div class="tittel">
+        <h1>Lag ditt favoritt lag</h1>
+        <h2>Føler du deg som en Pep Guardiola, eller Jose Mourinho. Så lag ditt favorittlag da!</h2>
+    </div>
+
+
+
+    <div class="bane-container">
+
+
+        <div class="bane">
+            <div class="position" id="vv">
+                <p class="position-placeholder">VV</p>
+                <i class="cross fa-regular fa-circle-xmark"></i>
+                <i class="search fa-solid fa-magnifying-glass"></i>
+                <div class="position-title">Venstre Ving</div>
+                <div class="spiller-info">
+                    <img src="" class="player-img" alt="">
+                    <div class="spiller-navn"></div>
+                </div>
+            </div>
+            <div class="position" id="s">
+                <p class="position-placeholder">S</p>
+                <i class="cross fa-regular fa-circle-xmark"></i>
+                <i class="search fa-solid fa-magnifying-glass"></i>
+                <div class="position-title">Spiss</div>
+                <div class="spiller-info">
+                    <img src="" alt="" class="player-img">
+                    <div class="spiller-navn"></div>
+                </div>
+            </div>
+            <div class="position" id="hv">
+                <p class="position-placeholder">HV</p>
+                <i class="cross fa-regular fa-circle-xmark"></i>
+                <i class="search fa-solid fa-magnifying-glass"></i>
+                <div class="position-title">Høyre Ving</div>
+                <div class="spiller-info">
+                    <img src="" alt="" class="player-img">
+                    <div class="spiller-navn"></div>
+                </div>
+            </div>
+            <div class="position" id="vSm">
+                <p class="position-placeholder">SM</p>
+                <i class="cross fa-regular fa-circle-xmark"></i>
+                <i class="search fa-solid fa-magnifying-glass"></i>
+                <div class="position-title">Venstre Sentral-Midtbane</div>
+                <div class="spiller-info">
+                    <img src="" alt="" class="player-img">
+                    <div class="spiller-navn"></div>
+                </div>
+            </div>
+            <div class="position" id="sdm">
+                <p class="position-placeholder">SDM</p>
+                <i class="cross fa-regular fa-circle-xmark"></i>
+                <i class="search fa-solid fa-magnifying-glass"></i>
+                <div class="position-title">Sentral Defansiv-Midtbane</div>
+                <div class="spiller-info">
+                    <img src="" alt="" class="player-img">
+                    <div class="spiller-navn"></div>
+                </div>
+            </div>
+            <div class="position" id="hSm">
+                <p class="position-placeholder">SM</p>
+                <i class="cross fa-regular fa-circle-xmark"></i>
+                <i class="search fa-solid fa-magnifying-glass"></i>
+                <div class="position-title">Høyre Sentral-Midtbane</div>
+                <div class="spiller-info">
+                    <img src="" alt="" class="player-img">
+                    <div class="spiller-navn"></div>
+                </div>
+            </div>
+
+            <div class="position" id="vb">
+                <p class="position-placeholder">VB</p>
+                <i class="cross fa-regular fa-circle-xmark"></i>
+                <i class="search fa-solid fa-magnifying-glass"></i>
+                <div class="position-title">Venstre Beck</div>
+                <div class="spiller-info">
+                    <img src="" alt="" class="player-img">
+                    <div class="spiller-navn"></div>
+                </div>
+            </div>
+            <div class="position" id="vMs">
+                <p class="position-placeholder">MS</p>
+                <i class="cross fa-regular fa-circle-xmark"></i>
+                <i class="search fa-solid fa-magnifying-glass"></i>
+                <div class="position-title">Venstre Midt-stopper</div>
+                <div class="spiller-info">
+                    <img src="" alt="" class="player-img">
+                    <div class="spiller-navn"></div>
+                </div>
+            </div>
+            <div class="position" id="hMs">
+                <p class="position-placeholder">MS</p>
+                <i class="cross fa-regular fa-circle-xmark"></i>
+                <i class="search fa-solid fa-magnifying-glass"></i>
+                <div class="position-title">Høyre Midt-stopper</div>
+                <div class="spiller-info">
+                    <img src="" alt="" class="player-img">
+                    <div class="spiller-navn"></div>
+                </div>
+            </div>
+            <div class="position" id="hb">
+                <p class="position-placeholder">HB</p>
+                <i class="cross fa-regular fa-circle-xmark"></i>
+                <i class="search fa-solid fa-magnifying-glass"></i>
+                <div class="position-title">Høyre Beck</div>
+                <div class="spiller-info">
+                    <img src="" alt="" class="player-img">
+                    <div class="spiller-navn"></div>
+                </div>
+            </div>
+            <div class="position" id="k">
+                <p class="position-placeholder">K</p>
+                <i class="cross fa-regular fa-circle-xmark"></i>
+                <i class="search fa-solid fa-magnifying-glass"></i>
+                <div class="position-title">Keeper</div>
+                <div class="spiller-info">
+                    <img src="" alt="" class="player-img">
+                    <div class="spiller-navn"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg2"></div>
+    </div>
+    <div class="benk">
+        <div class="position" id="reserve-1">
+            <p class="position-placeholder"></p>
+            <i class="cross fa-regular fa-circle-xmark"></i>
+            <i class="search fa-solid fa-magnifying-glass"></i>
+            <div class="position-title">Reserve</div>
+            <div class="spiller-info">
+                <img src="" alt="" class="player-img">
+                <div class="spiller-navn"></div>
+            </div>
+        </div>
+        <div class="position" id="reserve-2">
+            <p class="position-placeholder"></p>
+            <i class="cross fa-regular fa-circle-xmark"></i>
+            <i class="search fa-solid fa-magnifying-glass"></i>
+            <div class="position-title">Reserve</div>
+            <div class="spiller-info">
+                <img src="" alt="" class="player-img">
+                <div class="spiller-navn"></div>
+            </div>
+        </div>
+        <div class="position" id="reserve-3">
+            <p class="position-placeholder"></p>
+            <i class="cross fa-regular fa-circle-xmark"></i>
+            <i class="search fa-solid fa-magnifying-glass"></i>
+            <div class="position-title">Reserve</div>
+            <div class="spiller-info">
+                <img src="" alt="" class="player-img">
+                <div class="spiller-navn"></div>
+            </div>
+        </div>
+        <div class="position" id="reserve-4">
+            <p class="position-placeholder"></p>
+            <i class="cross fa-regular fa-circle-xmark"></i>
+            <i class="search fa-solid fa-magnifying-glass"></i>
+            <div class="position-title">Reserve</div>
+            <div class="spiller-info">
+                <img src="" alt="" class="player-img">
+                <div class="spiller-navn"></div>
+            </div>
+        </div>
+        <div class="position" id="reserve-5">
+            <p class="position-placeholder"></p>
+            <i class="cross fa-regular fa-circle-xmark"></i>
+            <i class="search fa-solid fa-magnifying-glass"></i>
+            <div class="position-title">Reserve</div>
+            <div class="spiller-info">
+                <img src="" alt="" class="player-img">
+                <div class="spiller-navn"></div>
+            </div>
+        </div>
+        <div class="position" id="reserve-6">
+            <p class="position-placeholder"></p>
+            <i class="cross fa-regular fa-circle-xmark"></i>
+            <i class="search fa-solid fa-magnifying-glass"></i>
+            <div class="position-title">Reserve</div>
+            <div class="spiller-info">
+                <img src="" alt="" class="player-img">
+                <div class="spiller-navn"></div>
+            </div>
+        </div>
+        <div class="position" id="reserve-7">
+            <p class="position-placeholder"></p>
+            <i class="cross fa-regular fa-circle-xmark"></i>
+            <i class="search fa-solid fa-magnifying-glass"></i>
+            <div class="position-title">Reserve</div>
+            <div class="spiller-info">
+                <img src="" alt="" class="player-img">
+                <div class="spiller-navn"></div>
+            </div>
+        </div>
+        <div class="position" id="reserve-8">
+            <p class="position-placeholder"></p>
+            <i class="cross fa-regular fa-circle-xmark"></i>
+            <i class="search fa-solid fa-magnifying-glass"></i>
+            <div class="position-title">Reserve</div>
+            <div class="spiller-info">
+                <img src="" alt="" class="player-img">
+                <div class="spiller-navn"></div>
+            </div>
+        </div>
+        <div class="position" id="reserve-9">
+            <p class="position-placeholder"></p>
+            <i class="cross fa-regular fa-circle-xmark"></i>
+            <i class="search fa-solid fa-magnifying-glass"></i>
+            <div class="position-title">Reserve</div>
+            <div class="spiller-info">
+                <img src="" alt="" class="player-img">
+                <div class="spiller-navn"></div>
+            </div>
+        </div>
+        <div class="position" id="reserve-10">
+            <p class="position-placeholder"></p>
+            <i class="cross fa-regular fa-circle-xmark"></i>
+            <i class="search fa-solid fa-magnifying-glass"></i>
+            <div class="position-title">Reserve</div>
+            <div class="spiller-info">
+                <img src="" alt="" class="player-img">
+                <div class="spiller-navn"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bg1"></div>
+
+    <div id="searchOverlay" class="search-overlay" aria-hidden="true">
+        <div class="search-modal" role="dialog" aria-modal="true">
+            <button class="search-close" type="button" aria-label="Lukk søk">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3>Søk spiller</h3>
+            <input id="globalSearchInput" class="search-input" type="text" placeholder="Skriv inn spiller..."
+                autocomplete="off" />
+            <div class="search-hint">Trykk ESC for å lukke</div>
+
+            <!-- mulig forbedring i fremtiden -->
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </div>
+
+
+    <div class="ai-container" id="aiContainer">
+        <h2>Hvor bra er dette laget?</h2>
+        <p>la oss spørre ai. Trykk på knappen under for å få en analyse av laget
+            ditt. Hvor bra hadde laget gjort det i premier league</p>
+        <button class="ai-btn">Klikk her!!</button>
+        <p class="ai-svar"></p>
+        <i class="cross fa-regular fa-xl fa-circle-xmark"></i>
+    </div>
+
+
+
+
+    <script>
+        let selectedCard = null;
+
+        let searchEl = null;            // input-elementet (globalt)
+        let activeSearchCard = null;    // hvilken .position vi åpnet søk for
+
+        const aiBtnEl = document.querySelector(".aiBtn")
+        const aiContEl = document.getElementById("aiContainer")
+
+        const overlay = document.getElementById("searchOverlay");
+        const globalInput = document.getElementById("globalSearchInput");
+        const closeBtn = overlay.querySelector(".search-close");
+        const aiCloseBtn = document.querySelector(".ai-container    .cross")
+        console.log("HER er knappen", aiCloseBtn)
+
+        // Når brukeren skriver i søkefeltet
+        let searchTimer = null;
+        let searchAbort = null;
+
+        aiBtnEl.addEventListener("click", function () {
+            aiContEl.classList.toggle("active")
+        })
+
+        aiCloseBtn.addEventListener("click", closeAiBtn)
+        function closeAiBtn() {
+            console.log("HEU!")
+            aiContEl.classList.remove("active")
+        }
+
+        globalInput.addEventListener("input", function () {
+            const q = globalInput.value.trim().toLowerCase();
+
+            clearTimeout(searchTimer);
+
+            searchTimer = setTimeout(async function () {
+                if (!q) {
+                    renderResults([]);
+                    return;
+                }
+
+                // Avbryt forrige request hvis brukeren skriver videre
+                if (searchAbort) searchAbort.abort();
+                searchAbort = new AbortController();
+
+                //  Viser at den laster
+                renderResults([{ name: "Laster...", img: "" }]);
+
+                try {
+                    const results = await searchPlayersApi(q, searchAbort.signal);
+                    renderResults(results);
+                } catch (err) {
+                    if (err.name === "AbortError") return;
+                    renderResults([]);
+                }
+            }, 250);
+        });
+
+
+        async function searchPlayersApi(query, signal) {
+            const q = query.trim().toLowerCase();
+            if (!q) return [];
+
+            const url = `http://localhost:3000/api/search?q=${encodeURIComponent(q)}`;
+
+            const res = await fetch(url, { signal });
+            if (!res.ok) return [];
+
+            return await res.json();
+        }
+
+        function openGlobalSearch(card) {
+            activeSearchCard = card;
+            searchEl = globalInput;
+
+            overlay.classList.add("active");
+            overlay.setAttribute("aria-hidden", "false");
+
+            globalInput.value = "";
+            globalInput.focus();
+
+            renderResults([]);
+        }
+
+        function closeGlobalSearch() {
+            overlay.classList.remove("active");
+            overlay.setAttribute("aria-hidden", "true");
+
+            activeSearchCard = null;
+            // searchEl kan du la stå, eller sette til null hvis du vil:
+            // searchEl = null;
+        }
+
+        // Lukk ved å klikke på backdrop (utenfor modalen)
+        overlay.addEventListener("click", function (e) {
+            if (e.target === overlay) closeGlobalSearch();
+        });
+
+        // Lukk-knapp
+        closeBtn.addEventListener("click", closeGlobalSearch);
+
+        // ESC for å lukke
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && overlay.classList.contains("active")) {
+                closeGlobalSearch();
+            }
+        });
+
+
+        // Funksjon som bytter .spiller-info mellom to .position
+        function swapPlayers(a, b) {
+            const aPlayer = a.querySelector(".spiller-info");
+            const bPlayer = b.querySelector(".spiller-info");
+
+            // Hvis en av dem mangler spiller-info (f.eks tom plass),
+            // lager vi en tom container slik at swap alltid fungerer
+            if (!aPlayer || !bPlayer) return;
+
+            const placeholder = document.createElement("div");
+
+            // 1. Sett placeholder der aPlayer står
+            a.replaceChild(placeholder, aPlayer);
+
+            // 2. Flytt aPlayer til b
+            b.replaceChild(aPlayer, bPlayer);
+
+            // 3. Flytt bPlayer til a
+            a.replaceChild(bPlayer, placeholder);
+        }
+
+
+
+        const resultsEl = document.getElementById("searchResults");
+
+        function renderResults(list) {
+            if (!list.length) {
+                resultsEl.innerHTML = `<p style="color:white;opacity:.8;">Ingen treff</p>`;
+                return;
+            }
+
+            resultsEl.innerHTML = list.map(p => /* gjør om data til html */`
+                <button type="button" class="result-item" data-name="${p.name}" data-img="${p.img}">
+                    ${p.img ? `<img src="${p.img}" alt="" class="result-img">` : ``}
+                    <span class="result-name">${p.name}</span>
+                </button>
+            `).join("");
+        }
+
+
+        function applyPlayerToCard(card, player) {
+            const nameEl = card.querySelector(".spiller-navn");
+            const imgEl = card.querySelector(".player-img");
+
+            if (nameEl) nameEl.textContent = player.name;
+            if (imgEl) imgEl.src = player.img;
+        }
+
+        resultsEl.addEventListener("click", function (e) {
+            const btn = e.target.closest(".result-item");
+            if (!btn) return;
+
+            if (!activeSearchCard) return;
+
+            const player = {
+                name: btn.dataset.name,
+                img: btn.dataset.img
+            };
+
+            applyPlayerToCard(activeSearchCard, player);
+            closeGlobalSearch();
+        });
+
+
+
+        /* funksjonalitet med kortene */
+        document.addEventListener("click", function (e) {
+            const card = e.target.closest(".position");
+
+
+            // Åpne global søk
+            if (e.target.closest(".search")) {
+                e.stopPropagation();
+                const searchCard = e.target.closest(".position");
+                if (searchCard) openGlobalSearch(searchCard);
+                return;
+            }
+
+
+
+            /* slette playerinfo */
+            function clearPlayerFromCard(card) {
+                const nameEl = card.querySelector(".spiller-navn");
+                const imgEl = card.querySelector(".player-img");
+
+                if (nameEl) nameEl.textContent = "";
+                if (imgEl) {
+                    imgEl.src = "";
+                    imgEl.alt = "";
+                }
+            }
+
+            if (e.target.closest(".cross")) {
+                e.stopPropagation();
+
+                const clickedCard = e.target.closest(".position");
+                if (!clickedCard) return;
+
+                clearPlayerFromCard(clickedCard);
+
+                // Hvis dette kortet var valgt for swap = reset
+                if (selectedCard === clickedCard) {
+                    selectedCard.classList.remove("active");
+                    selectedCard = null;
+                }
+
+                return;
+            }
+
+
+
+            // Klikk utenfor kort
+            if (!card) {
+                if (selectedCard) {
+                    selectedCard.classList.remove("active");
+                    selectedCard = null;
+                }
+                return;
+            }
+
+            // Første valg
+            if (!selectedCard) {
+                selectedCard = card;
+                card.classList.add("active");
+                return;
+            }
+
+            // Klikk på samme kort igjen (avvelg)
+            if (selectedCard === card) {
+                card.classList.remove("active");
+                selectedCard = null;
+                return;
+            }
+
+            // Bytt spillere
+            swapPlayers(selectedCard, card);
+
+            // Reset state
+            selectedCard.classList.remove("active");
+            selectedCard = null;
+        });
+    </script>
+</body>
+
+</html>
