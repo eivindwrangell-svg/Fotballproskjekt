@@ -1,10 +1,12 @@
 :root {
-
-    --color-green-bc: rgba(45, 95, 35, 1);
+    --color-green-bc-100: rgba(45, 95, 35, 1);
+    --color-green-bc-200: rgba(35, 90, 30, 1);
+    --color-green-border: rgb(18, 60, 8);
     --color-black-green: rgba(20, 40, 10, 1);
-    --black: rgba(0, 0, 0, 0);
+    --black: rgba(0, 0, 0, 1);
     --white: rgba(255, 255, 255, 0.9);
     --color-neon-green: rgba(30, 255, 80, 1);
+    --white-hover: rgb(245, 222, 179);
 }
 
 * {
@@ -18,7 +20,19 @@ body {
     text-align: center;
     align-content: start;
     min-height: 100vh;
+
 }
+
+h1 {
+    color: var(--white);
+    opacity: 0.8;
+}
+
+.info-tittel {
+    padding: 10px;
+    border-bottom: 2px solid var(--white);
+}
+
 
 /* nav shit */
 .nav-container {
@@ -31,7 +45,7 @@ body {
     width: min(50%, 700px);
     height: 60px;
     padding: 15px 40px;
-    background: var(--color-green-bc);
+    background: var(--color-green-bc-100);
     border-radius: 10px;
     color: white;
 
@@ -77,13 +91,15 @@ li a {
     background-image: url(./fotballbane-bakgrunn.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     z-index: -10;
     filter: blur(5px) brightness(75%);
+    height: 200vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 
@@ -98,13 +114,13 @@ img {
 .index-logo {
     display: flex;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 150px;
     text-align: center;
     align-items: center;
     justify-content: center;
     width: min(700px, 50%);
-    background: linear-gradient(to left, var(--color-green-bc), var(--color-black-green));
-    transform: skew(-10deg);
+    background: linear-gradient(to left, var(--color-green-bc-100), var(--color-black-green));
+    transform: skew(-15deg);
     height: 150px;
     border-radius: 10px;
     border-left: 10px solid var(--color-neon-green);
@@ -115,4 +131,123 @@ img {
 
     opacity: 0.85;
 
+}
+
+.section1 {
+    height: 100vh;
+}
+
+.red {
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #000;
+}
+
+.green {
+    height: 11px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #000;
+}
+
+.grey {
+    height: 11px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #000;
+}
+
+.section2 {
+    display: flex;
+
+    justify-content: space-evenly;
+
+}
+
+.fixtures {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    background-color: var(--color-green-bc-100);
+    border-radius: 10px;
+    border: 2px solid var(--color-green-border);
+    height: 500px;
+    width: 400px;
+}
+
+.fixture {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: min(300px, 70%);
+
+
+    background-color: var(--color-green-bc-200);
+    padding: 10px;
+    border-radius: 10px;
+
+    transition: 0.5s ease;
+}
+
+.fixture:hover {
+    box-shadow: 0 0 5px #000;
+}
+
+.transfer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+    width: min(350px, 80%);
+    background-color: var(--color-green-bc-200);
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.transfer:hover {
+    box-shadow: 0 0 5px #000;
+}
+
+.transfers {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    background-color: var(--color-green-bc-100);
+    border-radius: 10px;
+    border: 2px solid var(--color-green-border);
+    height: 500px;
+    width: 400px;
+}
+
+.club {
+    height: 40px;
+}
+
+.player {
+    height: 75px;
+}
+
+
+.transfer-club {
+    height: 50px;
+}
+
+.arrow {
+    color: var(--black);
+    font-size: 3rem;
+
+}
+
+.score {
+    font-size: 1.25rem;
+    color: white;
+    opacity: 0.8;
 }

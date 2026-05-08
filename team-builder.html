@@ -19,7 +19,7 @@
         </div>
         <ul class="nav-links">
             <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="#" class="nav-link aiBtn">Ai rating</a></li>
+            <li><a href="#" class="nav-link ">Rankings</a></li>
             <li><a href="team-builder.html" class="nav-link">Team Builder</a></li>
 
         </ul>
@@ -277,14 +277,6 @@
     </div>
 
 
-    <div class="ai-container" id="aiContainer">
-        <h2>Hvor bra er dette laget?</h2>
-        <p>la oss spørre ai. Trykk på knappen under for å få en analyse av laget
-            ditt. Hvor bra hadde laget gjort det i premier league</p>
-        <button class="ai-btn">Klikk her!!</button>
-        <p class="ai-svar"></p>
-        <i class="cross fa-regular fa-xl fa-circle-xmark"></i>
-    </div>
 
 
 
@@ -295,8 +287,7 @@
         let searchEl = null;            // input-elementet (globalt)
         let activeSearchCard = null;    // hvilken .position vi åpnet søk for
 
-        const aiBtnEl = document.querySelector(".aiBtn")
-        const aiContEl = document.getElementById("aiContainer")
+
 
         const overlay = document.getElementById("searchOverlay");
         const globalInput = document.getElementById("globalSearchInput");
@@ -308,21 +299,14 @@
         let searchTimer = null;
         let searchAbort = null;
 
-        aiBtnEl.addEventListener("click", function () {
-            aiContEl.classList.toggle("active")
-        })
 
-        aiCloseBtn.addEventListener("click", closeAiBtn)
-        function closeAiBtn() {
-            console.log("HEU!")
-            aiContEl.classList.remove("active")
-        }
 
         globalInput.addEventListener("input", function () {
             const q = globalInput.value.trim().toLowerCase();
 
             clearTimeout(searchTimer);
 
+            //søking av spillere
             searchTimer = setTimeout(async function () {
                 if (!q) {
                     renderResults([]);
@@ -371,6 +355,7 @@
 
             renderResults([]);
         }
+        //søke spillere avslutt
 
         function closeGlobalSearch() {
             overlay.classList.remove("active");
