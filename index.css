@@ -140,19 +140,19 @@ img {
 .red {
     height: 16px;
     border-radius: 50%;
-    box-shadow: 0 0 2px #000;
+
 }
 
 .green {
     height: 11px;
     border-radius: 50%;
-    box-shadow: 0 0 2px #000;
+
 }
 
 .grey {
     height: 11px;
     border-radius: 50%;
-    box-shadow: 0 0 2px #000;
+
 }
 
 .section2 {
@@ -172,7 +172,7 @@ img {
     background-color: var(--color-green-bc-100);
     border-radius: 10px;
     border: 2px solid var(--color-green-border);
-    height: 500px;
+
     width: 400px;
 }
 
@@ -182,11 +182,11 @@ img {
     align-items: center;
     justify-content: space-evenly;
     gap: 10px;
-    width: min(300px, 70%);
+    padding: 10px;
+    width: min(300px, 80%);
 
 
     background-color: var(--color-green-bc-200);
-    padding: 10px;
     border-radius: 10px;
 
     transition: 0.5s ease;
@@ -197,14 +197,15 @@ img {
 }
 
 .transfer {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    justify-content: space-evenly;
-
+    justify-content: center;
 
     width: min(350px, 80%);
     background-color: var(--color-green-bc-200);
     padding: 10px;
+    padding-left: 35px;
     gap: 10px;
     border-radius: 10px;
     transition: 0.5s ease;
@@ -220,6 +221,7 @@ img {
     flex-direction: column;
     justify-content: space-evenly;
 
+
     background-color: var(--color-green-bc-100);
     border-radius: 10px;
     border: 2px solid var(--color-green-border);
@@ -228,7 +230,11 @@ img {
 }
 
 .club {
-    height: 40px;
+    height: 30px;
+}
+
+.leverkusen {
+    height: 25px;
 }
 
 .player {
@@ -247,7 +253,66 @@ img {
 }
 
 .score {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    font-weight: 700;
     color: white;
     opacity: 0.8;
+}
+
+/* liga oppsett */
+.liga-container {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--color-green-bc-200);
+
+    width: min(350px, 80%);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: var(--white);
+}
+
+.liga-left-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.liga-right-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pil-opp {
+    display: block;
+}
+
+.liga-right-container .pil-ned {
+    display: none;
+}
+
+.liga-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.fixtures-list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 14px;
+
+    background-color: rgba(20, 40, 10, 0.2);
+    border-radius: 10px;
+
 }

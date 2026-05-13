@@ -33,7 +33,7 @@
 
     <div class="section2">
         <div class="transfers">
-            <h1 class="info-tittel">Transfers</h1>
+            <h1 class="info-tittel">Top Transfers</h1>
             <div class="transfer">
                 <div class="player"><img src="./bilder-fotballproskjekt/openda.png" class="player" alt=""></div>
                 <i class="fa-solid fa-arrow-right-long arrow"></i>
@@ -59,40 +59,103 @@
 
         <div class="fixtures">
             <h1 class="info-tittel">Recent fixtures</h1>
-            <div class="fixture">
-                <img src="./bilder-fotballproskjekt/green_button.webp" class="green dot" alt="">
-                <img src="./bilder-fotballproskjekt/Manchester_United_FC.svg" class="club" alt="">
-                <div class="score">3 - 2</div>
-                <img src="bilder-fotballproskjekt/liverpool_FC.png" alt="" class="club">
-                <img src="./bilder-fotballproskjekt/red_button.png" class="red dot" alt="">
+
+
+            <div class="liga-container" id="pl">
+                <div class="liga-header" onclick="displayFixtures(this)"><!-- js -->
+                    <div class="liga-left-container">
+                        <img src="./bilder-fotballproskjekt/pl.png" class="club" alt="">
+                        <h4>Premier League</h4>
+                    </div>
+                    <div class="liga-right-container">
+                        <h4><span class="pl-ant-fixtures">0</span> fixtures</h4> <!-- js -->
+                        <i class="fa-solid fa-chevron-up pil-opp"></i>
+                        <i class="fa-solid fa-chevron-down pil-ned"></i>
+                    </div>
+                </div>
+                <div class="fixtures-list">
+                    <div class="fixture">
+                        <img src="./bilder-fotballproskjekt/green_button.webp" class="green dot" alt="">
+                        <img src="./bilder-fotballproskjekt/Manchester_United_FC.svg" class="club" alt="">
+                        <div class="score">3 - 2</div>
+                        <img src="bilder-fotballproskjekt/liverpool_FC.png" alt="" class="club">
+                        <img src="./bilder-fotballproskjekt/red_button.png" class="red dot" alt="">
+                    </div>
+                    <div class="fixture">
+                        <img src="./bilder-fotballproskjekt/grey-dot.png" class="grey dot" alt="">
+                        <img src="./bilder-fotballproskjekt/Manchester_City_FC.png" class="club" alt="">
+                        <div class="score">3 - 3</div>
+                        <img src="bilder-fotballproskjekt/Everton_FC_logo.png" alt="" class="club">
+                        <img src="./bilder-fotballproskjekt/grey-dot.png" class="grey dot" alt="">
+                    </div>
+                    <div class="fixture">
+                        <img src="./bilder-fotballproskjekt/grey-dot.png" class="grey dot" alt="">
+                        <img src="./bilder-fotballproskjekt/newcastle.png" class="club" alt="">
+                        <div class="score">1 - 1</div>
+                        <img src="bilder-fotballproskjekt/not-forrest.png" alt="" class="club">
+                        <img src="./bilder-fotballproskjekt/grey-dot.png" class="grey dot" alt="">
+                    </div>
+
+                </div>
             </div>
-            <div class="fixture">
-                <img src="./bilder-fotballproskjekt/green_button.webp" class="green dot" alt="">
-                <img src="./bilder-fotballproskjekt/Arsenal_FC.png" class="club" alt="">
-                <div class="score">2 - 1</div>
-                <img src="bilder-fotballproskjekt/atletico-madrid.png" alt="" class="club">
-                <img src="./bilder-fotballproskjekt/red_button.png" class="red dot" alt="">
+            <div class="liga-container" id="cl">
+                <div class="liga-header" onclick="displayFixtures(this)"><!-- js -->
+                    <div class="liga-left-container">
+                        <img src="./bilder-fotballproskjekt/cl.png" class="club" alt="">
+                        <h4>Champions League</h4>
+                    </div>
+                    <div class="liga-right-container">
+                        <h4><span class="cl-ant-fixtures">0</span> fixtures</h4> <!-- js -->
+                        <i class="fa-solid fa-chevron-up pil-opp"></i>
+                        <i class="fa-solid fa-chevron-down pil-ned"></i>
+                    </div>
+                </div>
+                <div class="fixtures-list">
+                    <div class="fixture">
+                        <img src="./bilder-fotballproskjekt/green_button.webp" class="green dot" alt="">
+                        <img src="./bilder-fotballproskjekt/Arsenal_FC.png" class="club" alt="">
+                        <div class="score">2 - 1</div>
+                        <img src="bilder-fotballproskjekt/atletico-madrid.png" alt="" class="club">
+                        <img src="./bilder-fotballproskjekt/red_button.png" class="red dot" alt="">
+                    </div>
+                    <div class="fixture">
+                        <img src="./bilder-fotballproskjekt/green_button.webp" class="green dot" alt="">
+                        <img src="./bilder-fotballproskjekt/psg.png" class="club" alt="">
+                        <div class="score">6 - 5</div>
+                        <img src="bilder-fotballproskjekt/bayern.png" alt="" class="club">
+                        <img src="./bilder-fotballproskjekt/red_button.png" class="red dot" alt="">
+                    </div>
+
+                </div>
             </div>
-            <div class="fixture">
-                <img src="./bilder-fotballproskjekt/grey-dot.png" class="grey dot" alt="">
-                <img src="./bilder-fotballproskjekt/Manchester_City_FC.png" class="club" alt="">
-                <div class="score">3 - 3</div>
-                <img src="bilder-fotballproskjekt/Everton_FC_logo.png" alt="" class="club">
-                <img src="./bilder-fotballproskjekt/grey-dot.png" class="grey dot" alt="">
-            </div>
-            <div class="fixture">
-                <img src="./bilder-fotballproskjekt/green_button.webp" class="green dot" alt="">
-                <img src="./bilder-fotballproskjekt/psg.png" class="club" alt="">
-                <div class="score">6 - 5</div>
-                <img src="bilder-fotballproskjekt/bayern.png" alt="" class="club">
-                <img src="./bilder-fotballproskjekt/red_button.png" class="red dot" alt="">
-            </div>
-            <div class="fixture">
-                <img src="./bilder-fotballproskjekt/green_button.webp" class="green dot" alt="">
-                <img src="./bilder-fotballproskjekt/leverkusen.png" class="club" alt="">
-                <div class="score">4 - 1</div>
-                <img src="bilder-fotballproskjekt/dortmund.png" alt="" class="club">
-                <img src="./bilder-fotballproskjekt/red_button.png" class="red dot" alt="">
+            <div class="liga-container" id="bl">
+                <div class="liga-header" onclick="displayFixtures(this)"><!-- js -->
+                    <div class="liga-left-container">
+                        <img src="./bilder-fotballproskjekt/bl.png" class="club" alt="">
+                        <h4>Bundesliga</h4>
+                    </div>
+                    <div class="liga-right-container">
+                        <h4><span class="bl-ant-fixtures">0</span> fixtures</h4> <!-- js -->
+                        <i class="fa-solid fa-chevron-up pil-opp"></i>
+                        <i class="fa-solid fa-chevron-down pil-ned"></i>
+                    </div>
+                </div>
+                <div class="fixtures-list">
+                    <div class="fixture">
+                        <img src="./bilder-fotballproskjekt/green_button.webp" class="green dot" alt="">
+                        <img src="./bilder-fotballproskjekt/leverkusen.png" class="club leverkusen" alt="">
+                        <div class="score">4 - 1</div>
+                        <img src="bilder-fotballproskjekt/dortmund.png" alt="" class="club">
+                        <img src="./bilder-fotballproskjekt/red_button.png" class="red dot" alt="">
+                    </div>
+                    <div class="fixture">
+                        <img src="./bilder-fotballproskjekt/green_button.webp" class="green dot" alt="">
+                        <img src="./bilder-fotballproskjekt/leipzig.png" class="club leverkusen" alt="">
+                        <div class="score">2 - 1</div>
+                        <img src="bilder-fotballproskjekt/st-pauli.png" alt="" class="club">
+                        <img src="./bilder-fotballproskjekt/red_button.png" class="red dot" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -110,7 +173,57 @@
 
 
 
+    <script>
+        //fixtures list antall
 
+        //pl
+        const plContainerEl = document.getElementById("pl")
+        const plList = plContainerEl.querySelector(".fixtures-list")
+        const plAntall = plList.children.length;
+        const plDisplayedNumber = document.querySelector(".pl-ant-fixtures")
+        plDisplayedNumber.innerHTML = plAntall
+
+        //cl
+        const clContainerEl = document.getElementById("cl")
+        const clList = clContainerEl.querySelector(".fixtures-list")
+        const clAntall = clList.children.length;
+        const clDisplayedNumber = document.querySelector(".cl-ant-fixtures")
+        clDisplayedNumber.innerHTML = clAntall
+
+        //bl
+        const blContainerEl = document.getElementById("bl")
+        const blList = blContainerEl.querySelector(".fixtures-list")
+        const blAntall = blList.children.length;
+        const blDisplayedNumber = document.querySelector(".bl-ant-fixtures")
+        blDisplayedNumber.innerHTML = blAntall
+
+        //--- fixtures list antall slutt
+
+
+        //display fixtures
+
+        function displayFixtures(e) {
+            const containerEl = e.parentElement
+            const fixturesList = containerEl.querySelector(".fixtures-list")
+            const pilOpp = e.querySelector(".pil-opp")
+            const pilNed = e.querySelector(".pil-ned")
+
+            if (fixturesList.style.display === "flex") {
+                fixturesList.style.display = "none"
+                pilOpp.style.display = "block"
+                pilNed.style.display = "none"
+            }
+            else {
+                fixturesList.style.display = "flex"
+                pilOpp.style.display = "none"
+                pilNed.style.display = "block"
+                e.parentElement.style.height = "auto"
+            }
+        }
+
+
+
+    </script>
 </body>
 
 </html>
