@@ -1,0 +1,322 @@
+:root {
+    --color-green-bc-100: rgba(45, 95, 35, 1);
+    --color-green-bc-200: rgba(35, 90, 30, 1);
+    --color-green-border: rgb(18, 60, 8);
+    --color-black-green: rgba(20, 40, 10, 1);
+    --black: rgba(0, 0, 0, 1);
+    --white: rgba(255, 255, 255, 0.9);
+    --color-neon-green: rgba(30, 255, 80, 1);
+    --white-hover: rgb(245, 222, 179);
+
+    --main-font: 'Roboto', sans-serif;
+    --secondary-font: 'Playfair Display', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    text-align: center;
+    align-content: start;
+    min-height: 100vh;
+
+}
+
+h1 {
+    color: var(--white);
+    opacity: 0.8;
+}
+
+/* nav shit */
+.nav-container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+
+
+    width: min(50%, 700px);
+    height: 60px;
+    padding: 15px 40px;
+    background: var(--color-green-bc-100);
+    border-radius: 10px;
+    color: white;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.burger-container {
+    display: none;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+
+
+    gap: 20px;
+    font-size: 20px;
+    padding-left: 150px;
+}
+
+.nav-link {
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    transform: scale(1.05);
+    color: wheat;
+}
+
+
+.player1 {
+    height: 100vh;
+    width: 100%;
+
+
+
+    background-image: url(./bilder-fotballproskjekt/dembele.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+
+.player1 h1 {
+    grid-row: 1/3;
+    grid-column: 2/4;
+    font-family: var(--secondary-font);
+    font-size: 4.5rem;
+    color: var(--color-green-bc-200);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 5rem;
+    justify-self: left;
+    align-self: flex-start;
+    margin: 40px;
+    color: var(--color-green-bc-200);
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dembele-info {
+    z-index: 10;
+    grid-row: 4/6;
+    grid-column: 1/3;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.8;
+    color: white;
+    max-width: 700px;
+    opacity: 1;
+
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-left: 4px solid #2f6b2f;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+
+    animation: scale-down ease-in both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 100%;
+}
+
+@keyframes scale-down {
+    from {
+        font-size: 1.2rem;
+        opacity: 1;
+
+    }
+
+    to {
+        font-size: 0.8rem;
+        opacity: 0;
+    }
+}
+
+.player2 {
+    height: 100vh;
+    width: 100%;
+
+
+    background-image: url(./bilder-fotballproskjekt/harry-kane-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.player2 h1 {
+    grid-column: 2/4;
+    grid-row: 1;
+    justify-self: right;
+    align-self: self-start;
+
+    margin: 40px;
+    margin-top: 50px;
+
+    font-family: var(--secondary-font);
+    font-size: 5rem;
+    color: var(--color-green-bc-200);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+.kane-info {
+    z-index: 10;
+    grid-row: 2/6;
+    grid-column: 3/4;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.8;
+    color: white;
+
+    opacity: 1;
+
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-left: 4px solid #2f6b2f;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+
+    animation: scale-up-down ease-in-out both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 100%;
+}
+
+@keyframes scale-up-down {
+    0% {
+        font-size: 1rem;
+        opacity: 0;
+    }
+
+    50% {
+        font-size: 1.2rem;
+        opacity: 1;
+    }
+
+    100% {
+        font-size: 1rem;
+        opacity: 0;
+    }
+}
+
+
+.player3 {
+
+    height: 100vh;
+    width: 100%;
+
+
+    background-image: url(./bilder-fotballproskjekt/yamal-img.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.player3 h1 {
+    grid-column: 1/3;
+    grid-row: 2;
+    align-self: self-start;
+
+
+    margin: 40px;
+    margin-top: 50px;
+
+    font-family: var(--secondary-font);
+    font-size: 4rem;
+    color: var(--color-green-bc-200);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.yamal-info {
+    z-index: 10;
+    grid-row: 3/6;
+    grid-column: 1/3;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1;
+    line-height: 1.8;
+    color: white;
+    max-width: 500px;
+    justify-self: center;
+
+    opacity: 1;
+
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-left: 4px solid #2f6b2f;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+
+    animation: scale-up ease-out both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 100%;
+}
+
+@keyframes scale-up {
+    from {
+        font-size: 1rem;
+        opacity: 0;
+    }
+
+    to {
+        font-size: 1.3rem;
+        opacity: 1;
+    }
+}
